@@ -1,11 +1,11 @@
-function Valitation(birthday) {
+function validateAge(birthday) {
   const birth = new Date(birthday);
   const now = new Date();
-  const validate = now.getFullYear() - birth.getFullYear();
-  if (validate >= 14) {
-    return true;
-  } else {
-    return false;
-  }
+
+  // Создаем дату 14 лет назад от текущей даты
+  const fourteenYearsAgo = new Date();
+  fourteenYearsAgo.setFullYear(now.getFullYear() - 14);
+
+  return birth <= fourteenYearsAgo;
 }
 console.log(Valitation('2022-01-01'));
