@@ -25,7 +25,7 @@ function Elf(name, language) {
   this.spells = new Map();
 }
 
-Elf.prototype = Object.create(Character.prototype);
+Elf.prototype = Object.create(character.prototype);
 Elf.prototype.constructor = Elf;
 
 Elf.prototype.createSpell = function (spellName, effect) {
@@ -54,7 +54,7 @@ Elf.prototype.castSpell = function (spellName) {
   }
 };
 
-const orc = new character('Орк', 'Горг', 'Оркский');
+const orc = new Orc('Орк', 'Горг', 'Оркский');
 orc.say();
 orc.attack();
 
