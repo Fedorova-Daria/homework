@@ -3,10 +3,10 @@ class Car {
   #model;
   #mileage;
 
-  constructor(mark, model, initialMileage) {
+  constructor(mark, model, mileage) {
     this.#mark = mark;
     this.#model = model;
-    this.#mileage = 0;
+    this.#mileage = mileage;
   }
 
   get mileage() {
